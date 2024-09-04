@@ -47,7 +47,7 @@ const Daisy = () => {
 
         <div className="flex justify-center">
           {/* Daisy */}
-
+          <div>Hello</div>
           {/* Daisy ends */}
         </div>
       </div>
