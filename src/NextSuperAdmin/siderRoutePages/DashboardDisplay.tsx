@@ -1,3 +1,8 @@
+import CompanyCard from "../Props/CompanyCard";
+import logo from "../../assets/nextloogoforcode.png";
+import ChartDoughnut from "../allCharts/ChartDoughnut";
+import CardLineChart from "../allCharts/CardLineChart";
+
 const DashboardDisplay = () => {
   document.title = "Admin Dashboard Display";
 
@@ -26,14 +31,18 @@ const DashboardDisplay = () => {
               </div>
             </div>
           </div>
-          <div className="border h-[80%]">Chart</div>
+          <div className="border h-[80%]">
+            <CardLineChart />
+          </div>
         </div>
         <div className="h-full p-[20px] rounded-md m-2 bg-white">
           <div className="mb-2">
             <div className="font-bold text-blue-950">Financials</div>
             <div>Q1</div>
           </div>
-          <div className="border h-[80%]">Chart</div>
+          <div className="border h-[80%] flex justify-center">
+            <ChartDoughnut />
+          </div>
         </div>
       </div>
 
@@ -73,7 +82,7 @@ const DashboardDisplay = () => {
       </div>
 
       <div className="h-[600px] lg:h-[400px] py-5 grid grid-cols-1 gap-2">
-        <div className="h-full rounded-md m-1 bg-purple-500">Hello</div>
+        <CompanyCard logo={logo} companyName="Next" />
       </div>
     </div>
   );

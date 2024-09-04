@@ -1,21 +1,25 @@
-import React from "react";
+import { FC } from "react";
 
-// components
+interface iPropsCard {
+  text?: string;
+  logo: string;
+  companyName: string;
+}
 
-export default function CardPageVisits() {
+const CompanyCard: FC<iPropsCard> = ({ logo, companyName }) => {
   return (
-    <>
+    <div>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full px-4 max-w-full flex-grow flex-1">
               <h3 className="font-semibold text-base text-blueGray-700">
-                Page visits
+                Next
               </h3>
             </div>
             <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
               <button
-                className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="bg-blue-950 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
               >
                 See all
@@ -29,23 +33,34 @@ export default function CardPageVisits() {
             <thead>
               <tr>
                 <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Page name
+                  Company Name
                 </th>
                 <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Visitors
+                  Total Teachers
                 </th>
                 <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Unique users
+                  Total Students
                 </th>
                 <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Bounce rate
+                  Budjets
+                </th>
+                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                  Status
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex justify-start gap-2 items-center">
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-[50px] h-[20px] object-contain rounded-lg"
+                  />
+                  <div className="uppercase text-blue-950 text-[16px]">
+                    {companyName}
+                    {}
+                  </div>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   4,569
@@ -57,10 +72,23 @@ export default function CardPageVisits() {
                   <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
                   46,53%
                 </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                  <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                  46,53%
+                </td>
               </tr>
+
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/index.html
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex justify-start gap-2 items-center">
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-[50px] h-[20px] object-contain rounded-lg"
+                  />
+                  <div className="uppercase text-blue-950 text-[16px]">
+                    {companyName}
+                    {}
+                  </div>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   3,985
@@ -72,10 +100,23 @@ export default function CardPageVisits() {
                   <i className="fas fa-arrow-down text-orange-500 mr-4"></i>
                   46,53%
                 </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                  <i className="fas fa-arrow-down text-orange-500 mr-4"></i>
+                  46,53%
+                </td>
               </tr>
+
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/charts.html
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex justify-start gap-2 items-center">
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-[50px] h-[20px] object-contain rounded-lg"
+                  />
+                  <div className="uppercase text-blue-950 text-[16px]">
+                    {companyName}
+                    {}
+                  </div>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   3,513
@@ -87,10 +128,23 @@ export default function CardPageVisits() {
                   <i className="fas fa-arrow-down text-orange-500 mr-4"></i>
                   36,49%
                 </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                  <i className="fas fa-arrow-down text-orange-500 mr-4"></i>
+                  36,49%
+                </td>
               </tr>
+
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/tables.html
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex justify-start gap-2 items-center">
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-[50px] h-[20px] object-contain rounded-lg"
+                  />
+                  <div className="uppercase text-blue-950 text-[16px]">
+                    {companyName}
+                    {}
+                  </div>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   2,050
@@ -102,10 +156,22 @@ export default function CardPageVisits() {
                   <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
                   50,87%
                 </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                  <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
+                  50,87%
+                </td>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/profile.html
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex justify-start gap-2 items-center">
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-[50px] h-[20px] object-contain rounded-lg"
+                  />
+                  <div className="uppercase text-blue-950 text-[16px]">
+                    {companyName}
+                    {}
+                  </div>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                   1,795
@@ -117,11 +183,17 @@ export default function CardPageVisits() {
                   <i className="fas fa-arrow-down text-red-500 mr-4"></i>
                   46,53%
                 </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                  <i className="fas fa-arrow-down text-red-500 mr-4"></i>
+                  46,53%
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default CompanyCard;

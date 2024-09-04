@@ -7,12 +7,17 @@ import Finances from "../NextSuperAdmin/siderRoutePages/Finances";
 import Feedbacks from "../NextSuperAdmin/siderRoutePages/Feedbacks";
 import Reports from "../NextSuperAdmin/siderRoutePages/Reports";
 import Settings from "../NextSuperAdmin/siderRoutePages/Settings";
+import Daisy from "../DaisyComponents/Daisy";
 
 export const NextRouter = createBrowserRouter([
   {
     path: "/",
     element: <TeacherLayout />,
     children: [
+      {
+        index: true,
+        element: <DashboardDisplay />,
+      },
       {
         path: "main-dashboard",
         element: <DashboardDisplay />,
@@ -42,5 +47,9 @@ export const NextRouter = createBrowserRouter([
         element: <Settings />,
       },
     ],
+  },
+  {
+    path: "/daisy",
+    element: <Daisy />,
   },
 ]);

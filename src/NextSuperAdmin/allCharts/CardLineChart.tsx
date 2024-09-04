@@ -65,7 +65,7 @@ export default function CardLineChart() {
         </div>
         <div className="p-4 flex-auto">
           {/* Chart */}
-          <div className="relative h-220-px">
+          <div className="relative h-[220px]">
             <Bar options={options} data={data} />;
           </div>
         </div>

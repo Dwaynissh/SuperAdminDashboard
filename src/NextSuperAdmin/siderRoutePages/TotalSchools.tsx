@@ -1,7 +1,7 @@
-import CardBarChart from "../schools/CardBarChart";
-import CardLineChart from "../schools/CardLineChart";
-import CardPageVisits from "../schools/CardPageVisits ";
-import CardSocialTraffic from "../schools/CardSocialTraffic ";
+import CardBarChart from "../allCharts/CardBarChart";
+import CardLineChart from "../allCharts/CardLineChart";
+import CardPageVisits from "../allCharts/CardPageVisits ";
+import CardSocialTraffic from "../allCharts/CardSocialTraffic ";
 
 const TotalSchools = () => {
   document.title = "TotalSchools";
